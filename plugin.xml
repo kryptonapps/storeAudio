@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ 
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
+           id="com.mindfire.plugin"
+      version="0.1.0">
+    <name>StoreAudio</name>
+    <description>Demo Plugin</description>
+    <license>Some value</license>
+    <keywords>phonegap</keywords>
+ 
+    <js-module src="www/storeAudio.js" name="StoreAudio">
+        <clobbers target="window.storeAudio" />
+    </js-module>
+ 
+    <!-- android -->
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="StoreAudio">
+                <param name="android-package" value="com.kryptonapps.plugin.StoreAudio"/>
+            </feature>
+        </config-file>
+ 
+        <source-file src="src/android/StoreAudio.java" target-dir="src/com/kryptonapps/plugin" />
+     </platform>
+</plugin>
